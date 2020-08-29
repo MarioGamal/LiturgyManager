@@ -1,2 +1,2 @@
-# bookingCeremony
-ngo social app
+# Litrugy Manager
+Website for booking church liturgies.

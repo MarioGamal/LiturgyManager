@@ -10,7 +10,11 @@
 
 # production
 /build
+<<<<<<< HEAD
 /src/fetch
+=======
+/src/fetch/index.js
+>>>>>>> c56df3dd04cbfadcbe214542411d3acbb97ac741
 
 # misc
 .DS_Store
