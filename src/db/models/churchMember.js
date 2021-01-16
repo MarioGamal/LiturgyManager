@@ -51,7 +51,7 @@ const churchMemberSchema = mongoose.Schema({
     isDeacon: {
         type: Boolean
     },
-    street: {
+    /* street: {
         type: String,
         trim: true
     },
@@ -70,7 +70,7 @@ const churchMemberSchema = mongoose.Schema({
     region: {
         type: String,
         trim: true
-    },
+    }, */
     lastBooking: {
         holymassId: String,
         date: Date,

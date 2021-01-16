@@ -29,32 +29,32 @@ const getMember = function* (action) {
         const memberForm = {
             name: validateField('name', member.name),
             mobile: validateField('mobile', member.mobile),
-            street: validateField('street', member.street),
+            /* street: validateField('street', member.street),
             building: validateField('building', member.building),
             apartment: validateField('apartment', member.apartment),
             floor: validateField('floor', member.floor),
-            region: validateField('region', member.region),
+            region: validateField('region', member.region), */
             isDeacon: validateField('isDeacon', member.isDeacon)
         }
         yield put(setMember(`member.validationMsgs`, {
             name: memberForm.name.validationMsg,
             mobile: memberForm.mobile.validationMsg,
-            street: memberForm.street.validationMsg,
+            /* street: memberForm.street.validationMsg,
             building: memberForm.building.validationMsg,
             apartment: memberForm.apartment.validationMsg,
             floor: memberForm.floor.validationMsg,
-            region: memberForm.region.validationMsg,
+            region: memberForm.region.validationMsg, */
             isDeacon: memberForm.isDeacon.validationMsg
         }));
         yield put(setMember(`member.values`, {
             ...member,
             name: memberForm.name.value,
             mobile: memberForm.mobile.value,
-            street: memberForm.street.value,
+            /* street: memberForm.street.value,
             building: memberForm.building.value,
             apartment: memberForm.apartment.value,
             floor: memberForm.floor.value,
-            region: memberForm.region.value,
+            region: memberForm.region.value, */
             isDeacon: memberForm.isDeacon.value
         }));
     } catch (error) {
@@ -95,31 +95,31 @@ const updateMember = function* (action) {
         delete member.lastBooking;
         const memberForm = {
             name: validateField('name', member.name),
-            mobile: validateField('mobile', member.mobile),
+            mobile: validateField('mobile', member.mobile)/* ,
             street: validateField('street', member.street),
             building: validateField('building', member.building),
             apartment: validateField('apartment', member.apartment),
             floor: validateField('floor', member.floor),
-            region: validateField('region', member.region)
+            region: validateField('region', member.region) */
         }
         yield put(setMember(`member.validationMsgs`, {
             name: memberForm.name.validationMsg,
-            mobile: memberForm.mobile.validationMsg,
+            mobile: memberForm.mobile.validationMsg/* ,
             street: memberForm.street.validationMsg,
             building: memberForm.building.validationMsg,
             apartment: memberForm.apartment.validationMsg,
             floor: memberForm.floor.validationMsg,
-            region: memberForm.region.validationMsg
+            region: memberForm.region.validationMsg */
         }));
         yield put(setMember(`member.values`, {
             ...member,
             name: memberForm.name.value,
-            mobile: memberForm.mobile.value,
+            mobile: memberForm.mobile.value/* ,
             street: memberForm.street.value,
             building: memberForm.building.value,
             apartment: memberForm.apartment.value,
             floor: memberForm.floor.value,
-            region: memberForm.region.value
+            region: memberForm.region.value */
         }));
         yield put(setCommon(`loadingPage`, false));
     } catch (error) {

@@ -127,7 +127,7 @@ exports.search = (req, res) => {
             label: 'Mobile',
             value: 'mobile'
         },
-        {
+        /* {
             label: 'Building',
             value: 'building'
         },
@@ -145,7 +145,7 @@ exports.search = (req, res) => {
         {
             label: 'Region',
             value: 'region'
-        }, {
+        } */, {
             label: 'Last Booking',
             value: 'lastBooking'
         }

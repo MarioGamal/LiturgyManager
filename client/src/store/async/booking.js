@@ -32,7 +32,7 @@ const addMember = function* (action) {
         yield put(setBooking(`loading`, false));
         if (error?.response?.status === 404)
             yield* setMember({
-                name: '', mobile: '', street: '', building: '', apartment: '', floor: '', region: '',
+                name: '', mobile: '', /* street: '', building: '', apartment: '', floor: '', region: '', */
                 isDeacon: '', active: true
             }, id, edit)
         else
@@ -46,11 +46,11 @@ const setMember = function* (member, id, edit) {
         const memberForm = {
             name: validateField('name', member.name),
             mobile: validateField('mobile', member.mobile),
-            street: validateField('street', member.street),
+            /* street: validateField('street', member.street),
             building: validateField('building', member.building),
             apartment: validateField('apartment', member.apartment),
             floor: validateField('floor', member.floor),
-            region: validateField('region', member.region),
+            region: validateField('region', member.region), */
             isDeacon: validateField('isDeacon', member.isDeacon)
         }
         console.log(memberForm, member);
@@ -59,12 +59,12 @@ const setMember = function* (member, id, edit) {
             [id]: {
                 ...member,
                 name: memberForm.name.value,
-                mobile: memberForm.mobile.value,
+                /* mobile: memberForm.mobile.value,
                 street: memberForm.street.value,
                 building: memberForm.building.value,
                 apartment: memberForm.apartment.value,
                 floor: memberForm.floor.value,
-                region: memberForm.region.value,
+                region: memberForm.region.value, */
                 isDeacon: memberForm.isDeacon.value,
 
                 //   active: member.active,
@@ -78,11 +78,11 @@ const setMember = function* (member, id, edit) {
             [id]: {
                 name: memberForm.name.validationMsg,
                 mobile: memberForm.mobile.validationMsg,
-                street: memberForm.street.validationMsg,
+                /* street: memberForm.street.validationMsg,
                 building: memberForm.building.validationMsg,
                 apartment: memberForm.apartment.validationMsg,
                 floor: memberForm.floor.validationMsg,
-                region: memberForm.region.validationMsg,
+                region: memberForm.region.validationMsg, */
                 isDeacon: memberForm.isDeacon.validationMsg
             }
         }));

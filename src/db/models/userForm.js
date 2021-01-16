@@ -52,7 +52,7 @@ const schema = new Schema({
                 },
                 message: () => i18n.__('inValidMobile')
             }
-        },
+        }/* ,
         street: {
             type: String,
             trim: true,
@@ -76,7 +76,7 @@ const schema = new Schema({
         regoin: {
             type: String,
             trim: true
-        }
+        } */
     }
 }, { timestamps: true });
 

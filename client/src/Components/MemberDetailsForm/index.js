@@ -48,10 +48,10 @@ const MemberDetailsForm = ({ id, values, validationMsgs, regions, edit,
                             value={values.isDeacon} defaultValue={isDeaconItems[0].value}
                             onChange={(e) => changeHandle(id, 'isDeacon', e.target.value)}
                             items={isDeaconItems} rtl />
-                        <h5>
+                        { /*<h5>
                             {address}
                         </h5>
-                        <Input validationMsg={validationMsgs?.building} rtl
+                         <Input validationMsg={validationMsgs?.building} rtl
                             value={values.building || ''} placeholder={inputText.buildingPlaceholder}
                             onChange={(e) => changeHandle(id, 'building', e.target.value)}
                             classes='mb-2'>
@@ -78,7 +78,7 @@ const MemberDetailsForm = ({ id, values, validationMsgs, regions, edit,
                         <Dropdown validationMsg={validationMsgs?.region}
                             value={values.region || chooseRegion}
                             onChange={(e) => changeHandle(id, 'region', e.target.value)}
-                            items={regions} rtl />
+                            items={regions} rtl /> */}
 
                     </> : <>
                             <p className="card-text ">
